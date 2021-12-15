@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.190625" />
+        <entry key="app/src/main/res/font/oswald.xml" value="0.23489583333333333" />
+        <entry key="app/src/main/res/font/oswald_bold.xml" value="0.23489583333333333" />
+        <entry key="app/src/main/res/layout/activity_details.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_movie.xml" value="0.33" />
       </map>
     </option>
   </component>

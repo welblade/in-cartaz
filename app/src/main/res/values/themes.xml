@@ -13,4 +13,29 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="Theme.InCartaz.Body1" parent="TextAppearance.MaterialComponents.Body2">
+        <item name="fontFamily">@font/oswald</item>
+        <item name="android:fontFamily">@font/oswald</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+    <style name="Theme.InCartaz.ActionBar.Title" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/oswald_bold</item>
+        <item name="android:fontFamily">@font/oswald_bold</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">21sp</item>
+        <item name="android:letterSpacing">0.009375</item>
+    </style>
+    <style name="Theme.InCartaz.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="fontFamily">@font/oswald_bold</item>
+        <item name="android:fontFamily">@font/oswald_bold</item>
+    </style>
+    <style name="Theme.InCartaz.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="fontFamily">@font/oswald</item>
+        <item name="android:fontFamily">@font/oswald</item>
+    </style>
+    <style name="Theme.InCartaz.BigCaption" parent="Theme.InCartaz.Caption">
+        <item name="android:textSize">16sp</item>
+        <item name="android:letterSpacing">0.009375</item>
+    </style>
 </resources>
