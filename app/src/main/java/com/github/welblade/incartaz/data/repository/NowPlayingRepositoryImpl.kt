@@ -24,5 +24,4 @@ class NowPlayingRepositoryImpl(
             }
         ).flow
     }
-
 }
