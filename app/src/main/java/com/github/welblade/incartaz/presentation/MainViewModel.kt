@@ -1,13 +1,9 @@
 package com.github.welblade.incartaz.presentation
 
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
+import androidx.lifecycle.*
 import com.github.welblade.incartaz.data.model.NowPlayingResult
 import com.github.welblade.incartaz.domain.GetNowPlayingUseCase
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.onStart
@@ -21,7 +17,6 @@ class MainViewModel(
     private val _state = MutableLiveData<State>()
     val state: LiveData<State> = _state
 
-    @InternalCoroutinesApi
     fun getNowPlaying(page: Int = 1){
         viewModelScope.launch {
             nowPlayingUseCase(page)

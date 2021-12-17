@@ -26,12 +26,14 @@ class MovieListAdapter :
     class ViewHolder(private val binding: ItemMovieBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Result) {
             binding.tvTitle.text = item.title
-            binding.tvCategory.text = item.genreIDS.first().toString()
+            // binding.tvCategory.text = item.genreIDS.first().toString()
             binding.tvDate.text = item.releaseDate
-            val url = "https://www.themoviedb.org/t/p/w220_and_h330_face" + item.backdropPath
-            Glide.with(binding.root.context)
-                .load(Uri.parse(url))
-                .into(binding.ivPoster)
+            if(!item.posterPath.isNullOrBlank()){
+                val url = "https://www.themoviedb.org/t/p/w220_and_h330_face" + item.posterPath
+                Glide.with(binding.root.context)
+                    .load(Uri.parse(url))
+                    .into(binding.ivPoster)
+            }
         }
     }
     class DiffCallBack : DiffUtil.ItemCallback<Result>(){
