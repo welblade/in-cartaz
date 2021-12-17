@@ -12,13 +12,13 @@ interface TheMovieDbService {
     suspend fun getNowPlaying(
         @Query("api_key") apiKey: String,
         @Query("language") language: String,
-        @Query("page") page: Int,
+        @Query("page") page: Long,
     ): NowPlayingResult
 
     // https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US
     @GET("movie/{movieId}")
     suspend fun getMovie(
-        @Path("movieId") movieId: Int,
+        @Path("movieId") movieId: Long,
         @Query("api_key") apiKey: String,
         @Query("language") language: String,
     ):Movie

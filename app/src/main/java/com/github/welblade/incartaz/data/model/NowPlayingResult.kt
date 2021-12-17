@@ -15,9 +15,9 @@ data class NowPlayingResult (
 data class Result (
     val adult: Boolean,
     @SerializedName("backdrop_path")
-    val backdropPath: String,
+    val backdropPath: String?,
     @SerializedName("genres_id")
-    val genreIDS: List<Long>,
+    val genreIDS: List<Long>?,
     val id: Long,
     @SerializedName("original_language")
     val originalLanguage: String,
@@ -26,7 +26,7 @@ data class Result (
     val overview: String,
     val popularity: Double,
     @SerializedName("poster_path")
-    val posterPath: String,
+    val posterPath: String?,
     @SerializedName("release_date")
     val releaseDate: String,
     val title: String,

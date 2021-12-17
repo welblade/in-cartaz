@@ -60,6 +60,12 @@ dependencies {
     // https://mvnrepository.com/artifact/com.github.bumptech.glide/glide
     implementation 'com.github.bumptech.glide:glide:4.12.0'
 
+    def paging_version = "3.1.0"
+    implementation "androidx.paging:paging-runtime-ktx:$paging_version" // For Kotlin use paging-runtime-ktx
+    // alternatively - without Android dependencies for testing
+    testImplementation "androidx.paging:paging-common-ktx:$paging_version" // For Kotlin use paging-common-ktx
+
+
     testImplementation 'junit:junit:4.13.2'
     testImplementation 'io.mockk:mockk:1.12.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

@@ -1,6 +1,8 @@
 package com.github.welblade.incartaz.data.di
 
 import android.util.Log
+import com.github.welblade.incartaz.data.repository.MovieRepository
+import com.github.welblade.incartaz.data.repository.MovieRepositoryImpl
 import com.github.welblade.incartaz.data.repository.NowPlayingRepository
 import com.github.welblade.incartaz.data.repository.NowPlayingRepositoryImpl
 import com.github.welblade.incartaz.data.service.TheMovieDbService
@@ -44,6 +46,7 @@ object DataModules {
     private fun repositoryModule(): Module {
         return module {
             single<NowPlayingRepository> { NowPlayingRepositoryImpl(get())}
+            single<MovieRepository> { MovieRepositoryImpl(get()) }
         }
     }
 

@@ -7,6 +7,6 @@ interface MovieRepository {
     suspend fun getMovie(
         apiKey: String,
         language: String,
-        movieId: Int,
+        movieId: Long,
     ):Flow<Movie>
 }

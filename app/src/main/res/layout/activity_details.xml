@@ -15,26 +15,9 @@
         app:titleTextAppearance="@style/Theme.InCartaz.ActionBar.Title"
         app:title="@string/app_name"
         />
-    <TextView
-        android:id="@+id/tv_category"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
-        app:layout_constraintStart_toStartOf="@id/toolbar"
-        android:layout_marginStart="@dimen/layout_extra_padding"
-        android:textAppearance="@style/Theme.InCartaz.BigCaption"
-        tools:text="Category"/>
+
     <TextView
         android:id="@+id/tv_separator1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/tv_category"
-        app:layout_constraintStart_toEndOf="@id/tv_category"
-        android:layout_marginStart="@dimen/layout_half_padding"
-        android:textAppearance="@style/Theme.InCartaz.BigCaption"
-        android:text="@string/separator"/>
-    <TextView
-        android:id="@+id/tv_separator2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="@id/tv_date"
@@ -47,19 +30,20 @@
         android:id="@+id/tv_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/tv_separator1"
-        app:layout_constraintStart_toEndOf="@id/tv_separator1"
-        android:layout_marginStart="@dimen/layout_half_padding"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintStart_toStartOf="@id/toolbar"
+        android:layout_marginStart="@dimen/layout_extra_padding"
         android:textAppearance="@style/Theme.InCartaz.BigCaption"
         tools:text="20 de Abril de 2022"/>
     <TextView
         android:id="@+id/tv_original_language"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="@id/tv_separator2"
-        app:layout_constraintStart_toEndOf="@id/tv_separator2"
+        app:layout_constraintTop_toTopOf="@id/tv_separator1"
+        app:layout_constraintStart_toEndOf="@id/tv_separator1"
         android:layout_marginStart="@dimen/layout_half_padding"
         android:textAppearance="@style/Theme.InCartaz.BigCaption"
+        android:textAllCaps="true"
         tools:text="Portuguese"/>
 
     <ScrollView
@@ -69,7 +53,7 @@
         android:paddingHorizontal="@dimen/layout_padding"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_category">
+        app:layout_constraintTop_toBottomOf="@id/tv_date">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -79,7 +63,7 @@
                 android:id="@+id/iv_poster"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_marginHorizontal="@dimen/layout_padding"
+                android:layout_marginHorizontal="@dimen/layout_extra_padding"
                 android:layout_marginTop="@dimen/layout_padding"
                 android:background="#FFFAFAFA"
                 android:contentDescription="@string/movie_s_poster"
@@ -88,19 +72,29 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:src="@tools:sample/avatars" />
-
+            <TextView
+                android:id="@+id/tv_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/iv_poster"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="@dimen/layout_padding"
+                android:layout_marginHorizontal="@dimen/layout_padding"
+                android:textAppearance="@style/Theme.InCartaz.BigCaption"
+                tools:text="Category"/>
             <TextView
                 android:id="@+id/tv_description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/layout_padding"
-                android:layout_marginTop="@dimen/layout_padding"
+                android:layout_marginTop="@dimen/layout_half_padding"
                 android:text="@string/description"
                 android:textAppearance="@style/Theme.InCartaz.Subtitle1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/iv_poster" />
+                app:layout_constraintTop_toBottomOf="@id/tv_category" />
 
             <TextView
+                android:id="@+id/tv_overview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/layout_padding"
