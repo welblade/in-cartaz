@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:padding="8dp"
+    android:padding="@dimen/layout_half_padding"
     android:elevation="0dp"
     app:cardElevation="0dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingVertical="8dp" >
+        android:paddingVertical="@dimen/layout_half_padding" >
         <ImageView
             android:id="@+id/iv_poster"
             android:layout_width="120dp"
@@ -30,7 +30,7 @@
             android:textAppearance="@style/Theme.InCartaz.Subtitle1"
             app:layout_constraintStart_toStartOf="@id/iv_poster"
             app:layout_constraintTop_toBottomOf="@id/iv_poster"
-            android:paddingTop="8dp"
+            android:paddingTop="@dimen/layout_half_padding"
             tools:text="@tools:sample/cities" />
         <TextView
             android:id="@+id/tv_date"
